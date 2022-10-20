@@ -7,7 +7,8 @@ import dotenv from 'dotenv';
      const sequelize = new Sequelize(process.env.PG_DATABASE, process.env.PG_USER, process.env.PG_PASSWORD, {
          host: pg_host,
          port: process.env.PG_PORT,
-         dialect: 'postgres'
+         dialect: process.env.PG_DIALECT,
+         ssl: process.env.PG_SSL,
        });
 
 export default sequelize;
