@@ -80,6 +80,7 @@ export const loginUser = async(req) => {
 
             return {
                 userId: user.id,
+                roleId: user.roleid,
                 firstname: user.firstname,
                 lastname: user.lastname,
                 username: user.username,
